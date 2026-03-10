@@ -2,6 +2,7 @@
 
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import { ShoppingCart, CircleUserRound } from "lucide-react"
 import Image from "next/image"
 
 const Navbar = () => {
@@ -9,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="absolute top-5 left-5 w-[95%] md:w-[97%] rounded-full mx-auto  px-10 flex justify-between items-center shadow shadow-gray-200 py-3 h-[60px]">
+    <div className="absolute top-5 left-5 w-[95%] md:w-[97%] rounded-full mx-auto px-10 flex justify-between items-center py-3 h-[60px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg">
       <div className="flex gap-4 items-center">
         <Image
           src="/icons/logo.png"
@@ -18,14 +19,13 @@ const Navbar = () => {
           height={500}
           className="w-auto h-auto"
         />
-        <h3 className="font-[500] text-white">Toutem</h3>
+        <h3 className="font-[500] text-white">EliteFits</h3>
       </div>
 
       <ul className="hidden sm:flex sm:gap-2 font-[400] text-white">
         <li>HOME</li>
-        <li>ABOUT US</li>
-        <li>SHOP</li>
-        <li>CONTACT</li>
+        <li>FAQ</li>
+        <li>CONTACT US</li>
       </ul>
 
       <div>
@@ -33,20 +33,8 @@ const Navbar = () => {
           {!open ? <Menu color="white" onClick={()=>setOpen(true)}/> : <X color="white" onClick={()=>setOpen(false)}/>}
         </button>
         <div className="hidden sm:flex sm:gap-4">
-          <Image
-            src="/icons/shoppingBag.png"
-            width={500}
-            height={500}
-            alt='Shopping Bag'
-            className="w-auto h-auto"
-          />
-            <Image
-            src="/icons/search.png"
-            width={500}
-            height={500}
-            alt='Search'
-            className="w-auto h-auto"
-          />
+          <ShoppingCart color="white" className="cursor-pointer" />
+          <CircleUserRound color="white" className="cursor-pointer" />
         </div>
       </div>
     </div>
