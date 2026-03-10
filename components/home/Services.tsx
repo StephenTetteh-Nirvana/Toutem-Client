@@ -22,10 +22,10 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="flex flex-col md:flex-row mt-10 sm:mt-25 gap-5 justify-center items-center">
+    <div className="mx-auto grid grid-cols-2 lg:grid lg:grid-cols-4 md:grid md:grid-cols-3 mt-10 gap-3">
       {services.map((service)=>(
-        <div key={service.text} className="flex flex-col items-center justify-center w-[40%] h-[120px] sm:w-[25%] sm:h-[170px] md:w-[30%]
-         bg-[#F9FAFB] shadow shadow-black/20 rounded-tr-2xl rounded-bl-2xl p-2 gap-1"
+        <div key={service.text} className="flex flex-col items-center justify-center
+         bg-[#F9FAFB] shadow shadow-black/30 rounded-2xl p-2 gap-1"
         >
           <Image
             src={service.icon}

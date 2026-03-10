@@ -14,7 +14,7 @@ export default function Home() {
         <Aromatherapy/>
         <BestSellers/>
         <Advertisement/>
-        <Blog/>
+        {/* <Blog/> */}
       </main>
     </div>
   )
