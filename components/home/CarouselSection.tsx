@@ -39,7 +39,7 @@ const CarouselSection = () => {
   return (
     <div className="w-full h-[100vh]">
       <Carousel setApi={setApi} 
-        className="w-full rounded-none"
+        className="w-full rounded-none relative"
         plugins={[
         Autoplay({
           delay: 2000,
@@ -82,7 +82,7 @@ const CarouselSection = () => {
                     </div>
 
                     {/* SLIDER INDEX INDICATORS  */}
-                    <div className=" absolute bottom-5 flex items-center gap-2">
+                    <div className="absolute bottom-5 flex items-center gap-2">
                       {data.map((_, i) => (
                         <div
                           key={i}
@@ -93,14 +93,18 @@ const CarouselSection = () => {
                         />
                     ))}
                     </div>
+
+                    {/* CAROUSEL SLIDER BUTTONS  */}
+                    <div className="hidden lg:flex absolute top-0 flex items-center justify-between w-full h-full px-10">
+                      <CarouselPrevious className="static border border-white cursor-pointer bg-0 h-10 w-10 text-white" />
+                      <CarouselNext className=" static border border-white cursor-pointer bg-0 h-10 w-10 text-white" />
+                    </div>
                   </div>
                 </CardContent>
               </Card>
             </CarouselItem>
           ))}
         </CarouselContent>
-        {/* <CarouselPrevious />
-        <CarouselNext /> */}
       </Carousel>
       {/* <div className="py-2 text-center text-sm text-muted-foreground">
         Slide {current} of {count}
