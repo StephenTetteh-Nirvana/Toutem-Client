@@ -63,7 +63,7 @@ const CarouselSection = () => {
                     className="absolute top-0 w-full h-full flex flex-col items-center justify-center"
                   >
                     <h1 className="text-white text-[40px] md:text-[50px] text-center font-bold">{item.title}</h1>
-                    <p className="text-white text-center text-[15px] md:text-[25px] md:w-[700px] w-[97%]">{item.description}</p>
+                    <p className="text-white text-center text-[15px] md:text-[25px] md:w-[700px] w-[90%]">{item.description}</p>
 
                     {/* BUTTONS  */}
                     <div className="mt-5 flex items-center gap-5 transition-all ease-in-out">

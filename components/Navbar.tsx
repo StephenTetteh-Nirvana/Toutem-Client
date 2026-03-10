@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="absolute top-5 left-5 w-[95%] md:w-[97%] rounded-full mx-auto px-10 flex justify-between items-center py-3 h-[60px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg">
+    <div className="absolute top-5 left-5 w-[90%] md:w-[95%] rounded-full mx-auto px-10 flex justify-between items-center py-3 h-[60px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg">
       <div className="flex gap-4 items-center">
         <Image
           src="/icons/logo.png"
