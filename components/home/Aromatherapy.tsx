@@ -22,8 +22,8 @@ const Aromatherapy = () => {
       </div>
 
       <div className="flex flex-col gap-3 w-[75%] sm:w-[500px]">
-        <h2 className="text-primary text-xl text-center sm:text-2xl sm:text-end sm:font-bold">Improve your well-being with Aromatherapy</h2>
-        <p className="text-center text-[14px] text-secondary sm:text-end sm:text-[15px]">
+        <h2 className="text-xl text-center sm:text-2xl sm:text-end sm:font-bold">Improve your well-being with Aromatherapy</h2>
+        <p className="text-center text-[14px] sm:text-end sm:text-[15px]">
             Diffusing can be exactly what you need to add purpose and focus to your daily tasks. 
             We've got tons of fun diffuser blends, with scents to suit every mood, day and situation.
         </p>

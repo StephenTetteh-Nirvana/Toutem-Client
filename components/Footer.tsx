@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="flex flex-col gap-6 mt-10 sm:flex-row sm:justify-center">
         <div>
           <h2 className="text-primary text-center text-[15px] font-[600]">Customer Support</h2>
-          <ul className="text-center text-secondary text-[14px] mt-2">
+          <ul className="text-center text-[14px] mt-2">
            <li>Shipping</li>
            <li>Free Return</li>
            <li>Track your Order</li>
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
         <div>
           <h2 className="text-primary text-center text-[15px] font-[600]">About Us</h2>
-          <ul className="text-center text-secondary text-[14px] mt-2">
+          <ul className="text-center text-[14px] mt-2">
            <li>Our Values</li>
            <li>Sustainability</li>
            <li>Brand Ambassadors</li>
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         <div>
           <h2 className="text-primary text-center text-[15px] font-[600]">Help</h2>
-          <ul className="text-center text-secondary text-[14px] mt-2">
+          <ul className="text-center text-[14px] mt-2">
            <li>Leader Support</li>
            <li>Pleasant Grove Product Center</li>
            <li>Brand Ambassadors</li>

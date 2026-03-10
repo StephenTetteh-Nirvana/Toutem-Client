@@ -4,12 +4,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme{
-  --color-primary: #5FD788; 
-  --color-secondary: #9CA3AF;
-}
-
 :root {
+  --color-primary: #5FD788;
+  --color-secondary: #9CA3AF;
   --font-sans: var(--font-poppins);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Poppins, Geist } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -16,7 +13,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Toutem",
-  description: "A landing page for toutem",
+  description: "A landing page for an e-commerce website",
 };
 
 export default function RootLayout({
@@ -25,12 +22,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en" className={poppins.variable}>
       <body
       >
-        <Navbar/>
+        <main className="flex flex-col m-0 p-0">
           {children}
-        <Footer/>
+          <Navbar/>
+          <Footer/>
+        </main>
       </body>
     </html>
   );
