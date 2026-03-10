@@ -1,6 +1,6 @@
 "use client"
 
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -25,7 +25,7 @@ const CarouselSection = () => {
 
   useEffect(() => {
     if (!api) {
-      return
+      return;
     }
 
     setCount(api.scrollSnapList().length)
@@ -68,7 +68,6 @@ const CarouselSection = () => {
                     {/* BUTTONS  */}
                     <div className="mt-5 flex items-center gap-5 transition-all ease-in-out">
                       <Button 
-                        // variant="outline"
                         className="rounded-full p-4 bg-0 text-white cursor-pointer bg-green-700 group"
                       >
                         Shop Now
@@ -80,6 +79,19 @@ const CarouselSection = () => {
                       >
                         Learn More
                       </Button>
+                    </div>
+
+                    {/* SLIDER INDEX INDICATORS  */}
+                    <div className=" absolute bottom-5 flex items-center gap-2">
+                      {data.map((_, i) => (
+                        <div
+                          key={i}
+                          onClick={()=> api?.scrollTo(i)}
+                          className={`h-2 w-2 rounded-sm  transition-all cursor-pointer ${
+                            current === i + 1 ? "bg-white w-6" : "bg-white/50"
+                          }`}
+                        />
+                    ))}
                     </div>
                   </div>
                 </CardContent>
