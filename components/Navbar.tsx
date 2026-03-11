@@ -13,7 +13,7 @@ const Navbar = () => {
     <div 
       className="absolute top-5 left-5 w-[90%] md:w-[95%] rounded-full mx-auto px-10 
       flex justify-between items-center py-3 h-[60px] bg-white/10 backdrop-blur-md 
-      border border-white/20 rounded-2xl shadow-lg"
+      border border-white/20 rounded-2xl shadow-lg z-50"
     >
       <div className="flex gap-4 items-center">
         <Image
@@ -48,30 +48,19 @@ const Navbar = () => {
     </div>
 
     {/* MOBILE NAVIGATION  */}
-      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${open ? "h-56 opacity-100 visible" : "h-0 opacity-0 invisible"} 
+      <div className={`absolute top-10 left-5 w-[90%] bg-white/10 backdrop-blur-md 
+      border border-white/20 rounded-2xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out ${open ? "h-56 opacity-100 visible z-10" : "h-0 opacity-0 invisible"} 
         sm:hidden flex flex-col gap-2 justify-center items-center bg-[#F9FAFB]`}
       >
-        <ul className="flex flex-col items-center text-white">
-          <li>HOME</li>
-          <li>ABOUT US</li>
-          <li>SHOP</li>
-          <li>CONTACT</li>
+        <ul className="flex flex-col items-center text-white mt-5">
+          <li className="hover:border-b hover:border-slate-200 cursor-pointer">HOME</li>
+          <li className="hover:border-b hover:border-slate-200 cursor-pointer">FAQ</li>
+          <li className="hover:border-b hover:border-slate-200 cursor-pointer">SHOP</li>
+          <li className="hover:border-b hover:border-slate-200 cursor-pointer">CONTACT</li>
         </ul>
         <div className="mt-3 flex gap-3">
-          <Image
-            src="/icons/shoppingBag.png"
-            width={500}
-            height={500}
-            alt='Shopping Bag'
-            className="w-auto h-auto"
-          />
-          <Image
-            src="/icons/search.png"
-            width={500}
-            height={500}
-            alt='Search'
-            className="w-auto h-auto"
-          />
+          <ShoppingCart color="white" className="cursor-pointer" />
+          <CircleUserRound color="white" className="cursor-pointer" />
         </div>
       </div>
     </>
