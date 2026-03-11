@@ -75,7 +75,7 @@ const CarouselSection = () => {
                       initial={{ y: 10, opacity: 0}}
                       animate={{ y: 0 ,opacity: 1}}
                       transition={{ delay: 0.8 }}
-                      className="text-white text-center text-[15px] md:text-[25px] md:w-[700px] w-[90%]">{item.description}
+                      className="text-white text-center text-[15px] md:text-[20px] md:w-[700px] w-[90%]">{item.description}
                     </motion.p>
 
                     {/* BUTTONS  */}

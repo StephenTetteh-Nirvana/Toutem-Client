@@ -1,17 +1,16 @@
 import Advertisement from "@/components/home/Advertisement";
-import Aromatherapy from "@/components/home/Aromatherapy";
+import ExploreCollection from "@/components/home/ExploreCollection";
 import BestSellers from "@/components/home/BestSellers";
-import Blog from "@/components/home/Blog";
 import CarouselSection from "@/components/home/CarouselSection";
-import Services from "@/components/home/Services";
+import FeaturedProducts from "@/components/home/FeaturedProducts";
 
 export default function Home() {
   return (
     <div>
       <main>
         <CarouselSection/>
-        <Services/>
-        <Aromatherapy/>
+        <FeaturedProducts/>
+        <ExploreCollection/>
         <BestSellers/>
         <Advertisement/>
         {/* <Blog/> */}
