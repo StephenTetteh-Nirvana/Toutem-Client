@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const lato = Lato({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100","300", "400", "700", "900"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-poppins",
 });
-
 
 export const metadata: Metadata = {
   title: "EliteFits",
@@ -22,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={lato.variable}>
+    <html lang="en" className={poppins.variable}>
       <body
       >
         <main className="flex flex-col m-0 p-0">

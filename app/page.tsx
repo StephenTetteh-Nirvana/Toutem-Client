@@ -10,8 +10,8 @@ export default function Home() {
       <main>
         <CarouselSection/>
         <FeaturedProducts/>
-        <ExploreCollection/>
-        <BestSellers/>
+        {/* <ExploreCollection/>
+        <BestSellers/> */}
         <Advertisement/>
         {/* <Blog/> */}
       </main>

@@ -28,15 +28,6 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h2 className="text-primary text-center text-[15px] font-[600]">About Us</h2>
-          <ul className="text-center text-[14px] mt-2">
-           <li>Our Values</li>
-           <li>Sustainability</li>
-           <li>Brand Ambassadors</li>
-           <li>Fitness Professionals</li>
-          </ul>
-        </div>
-        <div>
           <h2 className="text-primary text-center text-[15px] font-[600]">Help</h2>
           <ul className="text-center text-[14px] mt-2">
            <li>Leader Support</li>

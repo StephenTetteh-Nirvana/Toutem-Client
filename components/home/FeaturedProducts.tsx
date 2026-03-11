@@ -5,22 +5,30 @@ import { Button } from "../ui/button"
 import { Card } from "../ui/card"
 import { motion } from "motion/react"
 
-const services = [
+const featuredProducts = [
   {
     image:"/images/productImage1.jpg",
-    text: "Essential oils"
   },
   {
     image:"/images/productImage5.jpg",
-    text: "Natural cosmetics"
   },
   {
     image:"/images/slideImage2.jpg",
-    text: "Diffusers",
   },
   {
     image:"/images/productImage6.jpg",
-    text: "Aromatherapy"
+  },
+  {
+    image:"/images/productImage1.jpg",
+  },
+  {
+    image:"/images/productImage5.jpg",
+  },
+  {
+    image:"/images/slideImage2.jpg",
+  },
+  {
+    image:"/images/productImage6.jpg",
   }
 ]
 
@@ -40,10 +48,10 @@ const FeaturedProducts = () => {
         transition={{ duration: 0.6, delay: 0.3 }} 
         className="mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 mt-5 gap-2"
       >
-        {services.map((service)=>(
-          <Card key={service.text} className="p-0 m-0 h-[200px] lg:h-[270px] group border-0 bg-transparent shadow-none">
+        {featuredProducts.map((product,index)=>(
+          <Card key={index} className="p-0 m-0 h-[200px] lg:h-[270px] group border-0 bg-transparent shadow-none">
             <Image
-              src={service.image}
+              src={product.image}
               width={700}
               height={700}
               alt='productImage' 
@@ -62,7 +70,7 @@ const FeaturedProducts = () => {
       >
         <Button
           variant="outline" 
-          className="rounded-full py-5 px-10 border border-black  cursor-pointer hover:bg-black hover:text-white hover:font-bold">
+          className="rounded-full py-5 px-10 border border-black  cursor-pointer hover:bg-black hover:text-white hover:font-semibold">
           BROWSE ALL PRODUCTS
         </Button>
       </motion.div>
