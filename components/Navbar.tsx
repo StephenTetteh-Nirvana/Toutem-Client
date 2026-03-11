@@ -10,7 +10,11 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="absolute top-5 left-5 w-[90%] md:w-[95%] rounded-full mx-auto px-10 flex justify-between items-center py-3 h-[60px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg">
+    <div 
+      className="absolute top-5 left-5 w-[90%] md:w-[95%] rounded-full mx-auto px-10 
+      flex justify-between items-center py-3 h-[60px] bg-white/10 backdrop-blur-md 
+      border border-white/20 rounded-2xl shadow-lg"
+    >
       <div className="flex gap-4 items-center">
         <Image
           src="/icons/logo.png"
@@ -30,7 +34,11 @@ const Navbar = () => {
 
       <div>
         <button className="cursor-pointer sm:hidden">
-          {!open ? <Menu color="white" onClick={()=>setOpen(true)}/> : <X color="white" onClick={()=>setOpen(false)}/>}
+          {!open ? 
+          <Menu color="white" onClick={()=>setOpen(true)}/> 
+          : 
+          <X color="white" onClick={()=>setOpen(false)}/>
+          }
         </button>
         <div className="hidden sm:flex sm:gap-4">
           <ShoppingCart color="white" className="cursor-pointer" />

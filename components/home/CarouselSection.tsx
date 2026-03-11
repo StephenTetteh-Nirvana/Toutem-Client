@@ -12,6 +12,7 @@ import {
 import { useState, useEffect } from "react"
 import { Button } from "../ui/button"
 import { MoveRight } from "lucide-react"
+import { motion } from "motion/react"
 import Autoplay from "embla-carousel-autoplay"
 
 
@@ -60,26 +61,44 @@ const CarouselSection = () => {
                     className="w-full h-[100vh] object-cover object-center relative brightness-40"
                   />
                   <div 
-                    className="absolute top-0 w-full h-full flex flex-col items-center justify-center"
+                    className="absolute top-0 w-full h-full flex flex-col items-center justify-center z-[999]"
                   >
-                    <h1 className="text-white text-[40px] md:text-[50px] text-center font-bold">{item.title}</h1>
-                    <p className="text-white text-center text-[15px] md:text-[25px] md:w-[700px] w-[90%]">{item.description}</p>
+                    <motion.h1 
+                      initial={{ y: 10, opacity: 0}}
+                      animate={{ y: 0 ,opacity: 1}}
+                      transition={{ delay: 0.5 }}
+                      className="text-white text-[40px] md:text-[50px] text-center font-bold"
+                    >
+                      {item.title}
+                    </motion.h1>
+                    <motion.p 
+                      initial={{ y: 10, opacity: 0}}
+                      animate={{ y: 0 ,opacity: 1}}
+                      transition={{ delay: 0.8 }}
+                      className="text-white text-center text-[15px] md:text-[25px] md:w-[700px] w-[90%]">{item.description}
+                    </motion.p>
 
                     {/* BUTTONS  */}
-                    <div className="mt-5 flex items-center gap-5 transition-all ease-in-out">
-                      <Button 
-                        className="rounded-full p-4 bg-0 text-white cursor-pointer bg-green-700 group"
+                    <motion.div
+                      initial={{ scale: 0.96, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ delay: 1 }}
+                      className="mt-5 flex items-center gap-5 z-10"
+                    >
+                      <Button
+                        className="rounded-full px-6 py-4 text-white hover:cursor-pointer bg-green-700 group flex items-center gap-2 hover:bg-green-800 transition-all"
                       >
                         Shop Now
-                        <MoveRight className="group-hover:ml-2 transition-[margin] ease-in-out" />
+                        <MoveRight className="ml-1 group-hover:ml-3 transition-all duration-300" />
                       </Button>
-                      <Button 
+
+                      <Button
                         variant="outline"
-                        className="rounded-full p-4 bg-0 text-white cursor-pointer"
+                        className="rounded-full px-6 py-4 text-black border-white hover:bg-white hover:cursor-pointer transition-all"
                       >
                         Learn More
                       </Button>
-                    </div>
+                    </motion.div>
 
                     {/* SLIDER INDEX INDICATORS  */}
                     <div className="absolute bottom-5 flex items-center gap-2">
@@ -95,9 +114,15 @@ const CarouselSection = () => {
                     </div>
 
                     {/* CAROUSEL SLIDER BUTTONS  */}
-                    <div className="hidden lg:flex absolute top-0 flex items-center justify-between w-full h-full px-10">
-                      <CarouselPrevious className="static border border-white cursor-pointer bg-0 h-10 w-10 text-white" />
-                      <CarouselNext className=" static border border-white cursor-pointer bg-0 h-10 w-10 text-white" />
+                    <div 
+                      className="hidden lg:flex absolute top-0 flex items-center justify-between w-full h-full px-10"
+                    >
+                      <CarouselPrevious 
+                        className="pointer-events-auto static border border-white cursor-pointer bg-transparent h-10 w-10 text-white"
+                      />
+                      <CarouselNext 
+                        className="pointer-events-auto static border border-white cursor-pointer bg-transparent h-10 w-10 text-white" 
+                      />
                     </div>
                   </div>
                 </CardContent>
