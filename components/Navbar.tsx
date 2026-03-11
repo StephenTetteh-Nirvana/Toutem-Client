@@ -3,10 +3,16 @@
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { ShoppingCart, CircleUserRound } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 import Image from "next/image"
+import MobileNavMenu from "./navbar/MobileNavMenu"
 
 const Navbar = () => {
   const [open,setOpen] = useState(false)
+
+  const toggleMenu = () => {
+  setOpen(prev => !prev)
+  }
 
   return (
     <>
@@ -35,9 +41,9 @@ const Navbar = () => {
       <div>
         <button className="cursor-pointer sm:hidden">
           {!open ? 
-          <Menu color="white" onClick={()=>setOpen(true)}/> 
+          <Menu color="white" onClick={()=>toggleMenu()}/> 
           : 
-          <X color="white" onClick={()=>setOpen(false)}/>
+          <X color="white" onClick={()=>toggleMenu()}/>
           }
         </button>
         <div className="hidden sm:flex sm:gap-4">
@@ -47,22 +53,20 @@ const Navbar = () => {
       </div>
     </div>
 
-    {/* MOBILE NAVIGATION  */}
-      <div className={`absolute top-10 left-5 w-[90%] bg-white/10 backdrop-blur-md 
-      border border-white/20 rounded-2xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out ${open ? "h-56 opacity-100 visible z-10" : "h-0 opacity-0 invisible"} 
-        sm:hidden flex flex-col gap-2 justify-center items-center bg-[#F9FAFB]`}
-      >
-        <ul className="flex flex-col items-center text-white mt-5">
-          <li className="hover:border-b hover:border-slate-200 cursor-pointer">HOME</li>
-          <li className="hover:border-b hover:border-slate-200 cursor-pointer">FAQ</li>
-          <li className="hover:border-b hover:border-slate-200 cursor-pointer">SHOP</li>
-          <li className="hover:border-b hover:border-slate-200 cursor-pointer">CONTACT</li>
-        </ul>
-        <div className="mt-3 flex gap-3">
-          <ShoppingCart color="white" className="cursor-pointer" />
-          <CircleUserRound color="white" className="cursor-pointer" />
-        </div>
-      </div>
+      {/* MOBILE NAVIGATION  */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{height: 0, opacity: 0}}
+            animate={{height: 200, opacity: 1}}
+            exit={{height: 0, opacity: 0}} 
+            className="absolute top-10 left-5 z-10 w-[90%] bg-white/10 backdrop-blur-md flex flex-col items-center justify-center  
+        border border-white/20 rounded-xl shadow-lg overflow-hidden"
+          >
+            <MobileNavMenu/>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
