@@ -7,25 +7,25 @@ import { motion } from "motion/react"
 
 const featuredProducts = [
   {
-    image:"/images/productImage1.jpg",
-  },
-  {
-    image:"/images/productImage5.jpg",
-  },
-  {
-    image:"/images/slideImage2.jpg",
+    image:"/images/productImage6.jpg",
   },
   {
     image:"/images/productImage6.jpg",
   },
   {
-    image:"/images/productImage1.jpg",
+    image:"/images/productImage6.jpg",
   },
   {
-    image:"/images/productImage5.jpg",
+    image:"/images/productImage6.jpg",
   },
   {
-    image:"/images/slideImage2.jpg",
+    image:"/images/productImage6.jpg",
+  },
+  {
+    image:"/images/productImage6.jpg",
+  },
+  {
+    image:"/images/productImage6.jpg",
   },
   {
     image:"/images/productImage6.jpg",

@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Footer = () => {
   return (
-    <div className="bg-[#F3F4F6] mt-15">
+    <div className="bg-slate-200">
     <section className="flex flex-col items-center justify-center py-5 
       sm:flex-row sm:justify-between sm:px-10"
     >
@@ -14,7 +14,7 @@ const Footer = () => {
           height={500}
           className="w-auto h-auto"
         />
-        <h4 className="font-[500]">Toutem</h4>
+        <h4 className="font-[500]">EliteFits</h4>
       </div>
 
       <div className="flex flex-col gap-6 mt-10 sm:flex-row sm:justify-center">
@@ -41,7 +41,7 @@ const Footer = () => {
 
 
     <section className="mt-10 text-center pb-4">
-      <p className="text-[14px] text-slate-500">Copyright &copy; 2025 Toutem</p>
+      <p className="text-[14px] text-slate-500">Copyright &copy; 2025 EliteFits</p>
       <p className="text-center text-[13px] text-slate-500">All Rights Reserved</p>
     </section>
     
