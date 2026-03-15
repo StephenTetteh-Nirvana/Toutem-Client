@@ -34,7 +34,7 @@ const Navbar = () => {
 
       <ul className="hidden sm:flex sm:gap-2 font-[400] text-white">
         <li>HOME</li>
-        <li>FAQ</li>
+        <li>SHOP</li>
         <li>CONTACT US</li>
       </ul>
 

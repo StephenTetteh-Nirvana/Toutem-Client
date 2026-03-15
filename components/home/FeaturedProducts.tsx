@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Button } from "../ui/button"
 import { Card } from "../ui/card"
 import { motion } from "motion/react"
+import Link from "next/link"
 
 const featuredProducts = [
   {
@@ -68,11 +69,15 @@ const FeaturedProducts = () => {
         transition={{ duration: 0.6, delay: 0.5 }} 
         className="mt-7 w-full flex items-center justify-center"
       >
-        <Button
-          variant="outline" 
-          className="rounded-full py-5 px-10 border border-black  cursor-pointer hover:bg-black hover:text-white hover:font-semibold">
-          BROWSE ALL PRODUCTS
-        </Button>
+        <Link
+          href="/products"
+        >
+          <Button
+            variant="outline" 
+            className="rounded-full py-5 px-10 border border-black  cursor-pointer hover:bg-black hover:text-white hover:font-semibold">
+            BROWSE ALL PRODUCTS
+          </Button>
+        </Link>
       </motion.div>
     </div>
 

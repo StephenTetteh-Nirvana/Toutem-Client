@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Button } from "../ui/button"
 
-const Advertisement = () => {
+const Banner = () => {
   return (
     <div className="relative h-[70vh] w-full mt-15">
 
@@ -51,4 +51,4 @@ const Advertisement = () => {
   )
 }
 
-export default Advertisement
+export default Banner

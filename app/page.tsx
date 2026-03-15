@@ -1,4 +1,4 @@
-import Advertisement from "@/components/home/Advertisement";
+import Banner from "@/components/home/Banner";
 import ExploreCollection from "@/components/home/ExploreCollection";
 import BestSellers from "@/components/home/BestSellers";
 import CarouselSection from "@/components/home/CarouselSection";
@@ -12,7 +12,7 @@ export default function Home() {
         <FeaturedProducts/>
         {/* <ExploreCollection/>
         <BestSellers/> */}
-        <Advertisement/>
+        <Banner/>
         {/* <Blog/> */}
       </main>
     </div>

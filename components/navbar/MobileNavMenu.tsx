@@ -14,11 +14,6 @@ const MobileNavMenu = () => {
           <li 
             className="hover:border-b hover:border-slate-200 cursor-pointer"
           >
-            FAQ
-          </li>
-          <li 
-            className="hover:border-b hover:border-slate-200 cursor-pointer"
-          >
             SHOP
           </li>
           <li 
