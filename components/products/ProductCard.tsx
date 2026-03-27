@@ -1,7 +1,7 @@
 import { Card } from "../ui/card"
 import { Button } from "../ui/button"
-import Image from "next/image"
 import { Plus } from "lucide-react"
+import Image from "next/image"
 
 const ProductCard = () => {
     return (

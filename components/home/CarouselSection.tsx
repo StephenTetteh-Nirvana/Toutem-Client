@@ -86,7 +86,7 @@ const CarouselSection = () => {
                       className="mt-5 flex items-center gap-5 z-10"
                     >
                       <Button
-                        className="rounded-full px-6 py-4 text-white hover:cursor-pointer bg-green-700 group flex items-center gap-2 hover:bg-green-800 transition-all"
+                        className="rounded-full px-6 py-5 text-white hover:cursor-pointer bg-green-700 group flex items-center gap-2 hover:bg-green-800 transition-all text-[15px]"
                       >
                         Shop Now
                         <MoveRight className="ml-1 group-hover:ml-3 transition-all duration-300" />
@@ -94,7 +94,7 @@ const CarouselSection = () => {
 
                       <Button
                         variant="outline"
-                        className="rounded-full px-6 py-4 text-black border-white hover:bg-white hover:cursor-pointer transition-all"
+                        className="rounded-full px-6 py-5 text-black border-white hover:bg-white hover:cursor-pointer transition-all text-[15px]"
                       >
                         Learn More
                       </Button>

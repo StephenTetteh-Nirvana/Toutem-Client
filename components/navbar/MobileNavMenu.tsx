@@ -3,9 +3,9 @@ import { ShoppingCart,CircleUserRound } from "lucide-react"
 const MobileNavMenu = () => {
     return (
       <div 
-        className="mt-5"
+        className=""
       > 
-        <ul className="flex flex-col items-center text-white mt-5">
+        <ul className="flex flex-col">
           <li 
             className="hover:border-b hover:border-slate-200 cursor-pointer"
           >
@@ -23,8 +23,8 @@ const MobileNavMenu = () => {
           </li>
         </ul>
         <div className="mt-3 flex gap-3">
-          <ShoppingCart color="white" className="cursor-pointer" />
-          <CircleUserRound color="white" className="cursor-pointer" />
+          <ShoppingCart className="cursor-pointer" />
+          <CircleUserRound className="cursor-pointer" />
         </div>
       </div>
     )
