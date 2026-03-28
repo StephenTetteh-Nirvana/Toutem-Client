@@ -1,15 +1,32 @@
+'use client'
+
 import { Card} from "../ui/card"
 import { ShieldCheck, DollarSign, Headset } from "lucide-react"
+import { motion } from "motion/react"
 
 const Services = () => {
     return (
         <div className="mt-10 w-full px-6 md:px-10">
-          <h1 className="text-center text-[30px] md:text-[35px] font-semibold">Why Shop With Us?</h1>
+          <motion.h1 
+            initial={{ y: 50, opacity: 0 }} 
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }} 
+            className="text-center text-[30px] md:text-[35px] font-semibold"
+          >
+            Why Shop From Us?
+          </motion.h1>
 
           {/* // CARDS  */}
           <div className="mt-5 flex flex-col gap-10 items-center md:flex-row md:items-center">
 
-            <div className="flex-1">
+            <motion.div 
+              initial={{ y: 80, opacity: 0 }} 
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }} 
+              className="flex-1"
+            >
               <Card className="px-3 flex items-center justify-center py-10 shadow-lg">
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <div className="rounded-full flex items-center justify-center bg-slate-100 w-15 h-15">
@@ -23,9 +40,15 @@ const Services = () => {
                   </p>
                 </div>
               </Card>
-            </div>
+            </motion.div>
 
-            <div className="flex-1">
+            <motion.div 
+              initial={{ y: 100, opacity: 0 }} 
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }} 
+              className="flex-1"
+            >
               <Card className="px-3 flex items-center justify-center py-10 shadow-lg">
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <div className="rounded-full flex items-center justify-center bg-slate-100 w-15 h-15">
@@ -39,9 +62,15 @@ const Services = () => {
                   </p>
                 </div>
               </Card>
-            </div>
+            </motion.div>
 
-            <div className="flex-1">
+            <motion.div 
+              initial={{ y: 120, opacity: 0 }} 
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.65, delay: 0.65 }} 
+              className="flex-1"
+            >
               <Card className="px-3 flex items-center justify-center py-10 shadow-lg">
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <div className="rounded-full flex items-center justify-center bg-slate-100 w-15 h-15">
@@ -55,7 +84,7 @@ const Services = () => {
                   </p>
                 </div>
               </Card>
-            </div>
+            </motion.div>
 
           </div>
         </div>
