@@ -1,4 +1,5 @@
 import { ShoppingCart,CircleUserRound } from "lucide-react"
+import { Button } from "../ui/button"
 
 const MobileNavMenu = () => {
     return (
@@ -26,6 +27,9 @@ const MobileNavMenu = () => {
           <ShoppingCart className="cursor-pointer" />
           <CircleUserRound className="cursor-pointer" />
         </div>
+        <Button className="mt-2 py-4 bg-black/70 cursor-pointer">
+          Get Started
+        </Button>
       </div>
     )
 }
