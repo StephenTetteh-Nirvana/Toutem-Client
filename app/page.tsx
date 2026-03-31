@@ -11,8 +11,8 @@ export default function Home() {
       <main>
         <CarouselSection/>
         <FeaturedProducts/>
+        <ExploreCollection/>
         <Services/>
-        {/* <ExploreCollection/> */}
         {/* <BestSellers/> */}
         <Banner/>
         {/* <Blog/> */}

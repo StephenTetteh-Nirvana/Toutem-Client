@@ -4,29 +4,46 @@ import Image from "next/image"
 import { Button } from "../ui/button"
 import { Card } from "../ui/card"
 import { motion } from "motion/react"
+import { featuredProducts } from "../../featuredProductsData"
 import Link from "next/link"
 
-const featuredProducts = [
-  {
-    image:"/images/productImage6.jpg",
-  },
-  {
-    image:"/images/productImage6.jpg",
-  },
-  {
-    image:"/images/productImage6.jpg",
-  },
-  {
-    image:"/images/productImage6.jpg",
-  }
-]
+// const featuredProducts = [
+//   {
+//     image:"/images/productImage6.jpg",
+//   },
+//   {
+//     image:"/images/productImage6.jpg",
+//   },
+//   {
+//     image:"/images/productImage6.jpg",
+//   },
+//   {
+//     image:"/images/productImage6.jpg",
+//   }
+// ]
 
 const FeaturedProducts = () => {
   return (
-    <div className="mt-4 px-5">
+    <div className="mt-10 px-5">
       <div className="flex flex-col gap-1">
-        <h1 className="text-center text-[30px] font-italic">Featured Products</h1>
-        <p className="text-center text-slate-400 -mt-2">FIND YOUR NICHE</p>
+        <motion.h1 
+          initial={{ y: 50, opacity: 0 }} 
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }} 
+          className="text-center text-[30px] font-italic"
+        >
+          Featured Products
+        </motion.h1>
+        <motion.p 
+          initial={{ y: 50, opacity: 0 }} 
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }} 
+          className="text-center text-slate-400 -mt-2"
+        >
+          FIND YOUR NICHE
+        </motion.p>
       </div>
 
       {/* PRODUCT CARDS  */}
@@ -39,13 +56,19 @@ const FeaturedProducts = () => {
       >
         {featuredProducts.map((product,index)=>(
           <Card key={index} className="p-0 m-0 h-[200px] lg:h-[270px] group border-0 bg-transparent shadow-none">
-            <Image
+            <img
+              src={product.image}
+              alt='productImage' 
+              className="w-full h-full object-contain object-center transition-transform duration-300 group-hover:scale-105 cursor-pointer brightness-95"
+              />
+            
+            {/* <Image
               src={product.image}
               width={700}
               height={700}
               alt='productImage' 
               className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105 cursor-pointer brightness-95"
-            />
+            /> */}
           </Card>
         ))}
       </motion.div>

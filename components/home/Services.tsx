@@ -6,7 +6,7 @@ import { motion } from "motion/react"
 
 const Services = () => {
     return (
-        <div className="mt-10 w-full px-6 md:px-10">
+        <div className="mt-20 w-full px-6 md:px-10">
           <motion.h1 
             initial={{ y: 50, opacity: 0 }} 
             whileInView={{ opacity: 1, y: 0 }}

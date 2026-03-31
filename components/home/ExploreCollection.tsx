@@ -1,34 +1,41 @@
+"use client"
+
 import Image from "next/image"
+import { motion } from "motion/react"
+import { Button } from "../ui/button"
 
 const ExploreCollection = () => {
   return (
-    <section className="mt-20 flex flex-col sm:flex-row sm:justify-between gap-3 items-center justify-center">
-      <div className="relative sm:-left-35">
+    <section className="mt-20 flex flex-col md:flex-row md:justify-between md:px-10 gap-3 items-center justify-center">
+      <motion.div
+        initial={{ scale: 0.80, opacity: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
         <Image
-          src="/images/aromatherapyBackground.png"
+          src="/images/productImage6.jpg"
           width={500}
           height={500}
           alt="cover"
-          className="w-auto h-auto sm:w-[250px]"
+          className="w-[300px] h-auto md:w-[350px]"
         />
-        <Image
-          src="/images/aromatherapyImage.png"
-          width={500}
-          height={500}
-          alt="cover"
-          className="w-auto h-auto absolute top-1/2 left-1/2 transform -translate-x-[45%] -translate-y-[60%]
-          sm:w-[400px] sm:ml-15"
-        />
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col gap-3 w-[75%] sm:w-[500px]">
-        <h2 className="text-xl text-center sm:text-2xl sm:text-end sm:font-bold">Improve your style with Nike Pro</h2>
+      <motion.div
+        initial={{ scale: 0.80, opacity: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.6 }} 
+        className="flex flex-col gap-3 w-[75%] sm:w-[500px]">
+        <h2 className="text-xl text-center sm:text-2xl sm:text-end sm:font-bold">Improve your style with Rolex</h2>
         <p className="text-center text-[14px] sm:text-end sm:text-[15px]">
-            Diffusing can be exactly what you need to add purpose and focus to your daily tasks. 
-            We've got tons of fun diffuser blends, with scents to suit every mood, day and situation.
+          Precision and craftsmanship define every Rolex timepiece, 
+          bringing purpose and confidence to every moment of your day.
+          With a legacy of excellence and timeless design, each watch is built to complement your style.
         </p>
-        <button className="text-white bg-primary text-center rounded-md py-3 sm:mt-4">EXPLORE THE COLLECTION</button>
-      </div>
+        <Button className="text-white bg-primary text-center rounded-md py-5 md:mt-4 cursor-pointer">EXPLORE THE COLLECTION</Button>
+      </motion.div>
     </section>
   )
 }

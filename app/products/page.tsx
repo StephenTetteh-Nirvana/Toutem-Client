@@ -14,19 +14,6 @@ import {
 const page = () => {
     return (
       <div>
-        <div className="w-full h-[40vh] md:h-[35vh] relative">
-          <Image
-            src="/images/productImage5.jpg"
-            width={1000}
-            height={1000}
-            alt="BannerImage"
-            className="w-full h-full object-cover brightness-40"
-          />
-          <div className="absolute top-0 flex items-center justify-center w-full h-full">
-            <h1 className="text-white text-4xl font-semibold">Products</h1>
-            <p></p>
-          </div>
-        </div>
 
         {/* PRODUCTS SECTION  */}
         <div className="px-3 py-4">
