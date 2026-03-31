@@ -10,7 +10,7 @@ const ProductPreview = () => {
     const foundProduct = dummyProducts.find((p)=> p.id === Number(id))
 
     return ( 
-      <div className="flex flex-col gap-2 md:flex-row md:items-center pb-5">
+      <div className="flex flex-col gap-2 md:flex-row md:items-center">
         {/* using default local image for now, will replace with dynamic image later  */}
         <div className="flex items-center justify-center">
           <img
@@ -44,9 +44,14 @@ const ProductPreview = () => {
            </Button>
 
            {/* add to cart button  */}
-           <Button className="bg-black text-white rounded-md w-[200px] py-4 cursor-pointer hover:bg-gray-800 transition-colors duration-300"> Add To Cart 
+           <Button className="bg-black/90 text-white rounded-md w-[200px] py-4 cursor-pointer hover:bg-gray-800 transition-colors duration-300"> Add To Cart 
            </Button>
           </div>
+        </div>
+
+        {/* additional space  */}
+        <div className="h-[120px] flex md:hidden">
+        
         </div>
       </div>
     )

@@ -18,6 +18,7 @@ import Autoplay from "embla-carousel-autoplay"
 
 import data from "@/carouselData"
 import Image from "next/image"
+import Link from "next/link"
 
 const CarouselSection = () => {
   const [api, setApi] = useState<CarouselApi>()
@@ -85,12 +86,14 @@ const CarouselSection = () => {
                       transition={{ delay: 1 }}
                       className="mt-5 flex items-center gap-5 z-10"
                     >
+                      <Link href="/products">
                       <Button
                         className="rounded-full px-6 py-5 text-white hover:cursor-pointer bg-green-700 group flex items-center gap-2 hover:bg-green-800 transition-all text-[15px]"
                       >
                         Shop Now
                         <MoveRight className="ml-1 group-hover:ml-3 transition-all duration-300" />
                       </Button>
+                      </Link>
 
                       <Button
                         variant="outline"

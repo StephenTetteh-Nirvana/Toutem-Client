@@ -7,8 +7,11 @@ import { AnimatePresence, motion } from "motion/react"
 import { Button } from "./ui/button"
 import Image from "next/image"
 import MobileNavMenu from "./navbar/MobileNavMenu"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 const Navbar = () => {
+  const pathname = usePathname()
   const [open,setOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -20,7 +23,8 @@ const Navbar = () => {
     <div 
       className="flex justify-between items-center py-3 px-8 h-[60px] z-50 border-b border-slate-300"
     >
-      <div className="flex gap-2 items-center">
+      <Link href={'/'} >
+      <div className="flex gap-2 items-center cursor-pointer">
         <Image
           src="/icons/logo.png"
           alt="Logo"
@@ -30,11 +34,18 @@ const Navbar = () => {
         />
         <h3 className="font-[500] text-lg">EliteFits</h3>
       </div>
+      </Link>
 
       <ul className="hidden sm:flex sm:gap-2 font-[400]">
-        <li>HOME</li>
-        <li>SHOP</li>
-        <li>CONTACT US</li>
+        <Link href="/">
+          <li className={pathname === '/' ? 'text-black font-bold' : 'text-gray-600 hover:text-black'}>HOME</li>
+        </Link>
+        <Link href="/products">
+          <li className={pathname === '/products' ? 'text-black font-bold' : 'text-gray-600 hover:text-black'}>SHOP</li>
+        </Link>
+        <Link href="/contact">
+          <li className={pathname === '/contact' ? 'text-black font-bold' : 'text-gray-600 hover:text-black'}>CONTACT US</li>
+        </Link>
       </ul>
 
       <div>
