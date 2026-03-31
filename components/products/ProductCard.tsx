@@ -23,7 +23,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           className="p-0 m-0 relative h-[200px] lg:h-[300px] group ring-0"
         >
             <img
-              src={product.image}
+              src="/images/productImage6.jpg"
               alt='productImage' 
               className="w-full h-full object-contain object-center 
               transition-transform duration-300 group-hover:scale-105 cursor-pointer"

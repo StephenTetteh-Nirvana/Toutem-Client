@@ -1,14 +1,14 @@
 export const featuredProducts = [
     {
-        image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png"
+        image: "/images/productImage6.jpg"
     },
     {
-        image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png"
+        image: "/images/productImage6.jpg"
     },
     {
-        image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png"
+        image: "/images/productImage6.jpg"
     },
     {
-        image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png"
+        image: "/images/productImage6.jpg"
     }
 ]

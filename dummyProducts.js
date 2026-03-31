@@ -5,7 +5,7 @@ export const dummyProducts = [
     price: 109.95,
     description: "Your perfect pack for everyday use and walks in the forest.",
     category: "men's clothing",
-    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    image: "/images/productImage6.jpg",
     rating: { rate: 3.9, count: 120 }
   },
   {
@@ -14,7 +14,7 @@ export const dummyProducts = [
     price: 22.3,
     description: "Slim-fitting style with contrast raglan long sleeve.",
     category: "men's clothing",
-    image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_UL1276_.jpg",
+    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
     rating: { rate: 4.1, count: 259 }
   },
   {
@@ -23,7 +23,7 @@ export const dummyProducts = [
     price: 55.99,
     description: "Great outerwear jackets for Spring/Autumn/Winter.",
     category: "men's clothing",
-    image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+    image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
     rating: { rate: 4.7, count: 500 }
   },
   {
@@ -32,7 +32,7 @@ export const dummyProducts = [
     price: 15.99,
     description: "The color could be slightly different between screen and real.",
     category: "men's clothing",
-    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
     rating: { rate: 2.1, count: 430 }
   },
   {
@@ -59,7 +59,7 @@ export const dummyProducts = [
     price: 9.99,
     description: "Classic Created Wedding Engagement Solitaire Diamond Ring.",
     category: "jewelery",
-    image: "https://fakestoreapi.com/img/71yaPmvw7CL._AC_UL640_QL65_ML3_.jpg",
+    image: "https://fakestoreapi.com/img/71yaPmvw7CL._AC_UL640_QL65_ML3_.png",
     rating: { rate: 3.0, count: 400 }
   },
   {
@@ -68,7 +68,7 @@ export const dummyProducts = [
     price: 10.99,
     description: "Rose Gold Plated Double Flared Tunnel Plug Earrings.",
     category: "jewelery",
-    image: "https://fakestoreapi.com/img/51UDEzMJVPL._AC_UL640_QL65_ML3_.jpg",
+    image: "https://fakestoreapi.com/img/51UDEzMJVPL._AC_UL640_QL65_ML3_.png",
     rating: { rate: 1.9, count: 100 }
   },
   {
@@ -77,7 +77,7 @@ export const dummyProducts = [
     price: 64,
     description: "USB 3.0 and USB 2.0 Compatibility. Fast data transfers.",
     category: "electronics",
-    image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+    image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.png",
     rating: { rate: 3.3, count: 203 }
   },
   {
@@ -86,7 +86,7 @@ export const dummyProducts = [
     price: 109,
     description: "Easy upgrade for faster boot up and shutdown.",
     category: "electronics",
-    image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+    image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.png",
     rating: { rate: 2.9, count: 470 }
   }
 ];

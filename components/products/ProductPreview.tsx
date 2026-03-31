@@ -16,7 +16,7 @@ const ProductPreview = () => {
           <img
             src="/images/productImage6.jpg"
             alt="productDisplay here"
-            className="w-[400px] h-auto"
+            className="w-[400px] h-[400px]"
           />
         </div>
 
@@ -35,7 +35,7 @@ const ProductPreview = () => {
             <Minus color="black" />
            </Button>
 
-           <p>2</p>
+           <p>1</p>
 
            <Button className="bg-slate-200 flex items-center justify-center rounded-md h-8 w-8 
            cursor-pointer border-0 hover:scale-110 transition-transform duration-300"

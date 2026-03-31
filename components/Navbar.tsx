@@ -57,7 +57,9 @@ const Navbar = () => {
           }
         </button>
         <div className="hidden sm:flex sm:gap-4 sm:items-center">
-          <ShoppingCart className="cursor-pointer" />
+          <Link href="/cart">
+            <ShoppingCart className="cursor-pointer" />
+          </Link>
           <CircleUserRound className="cursor-pointer" />
           <Button className="py-4 rounded-sm bg-black/80 cursor-pointer">
           Get Started
