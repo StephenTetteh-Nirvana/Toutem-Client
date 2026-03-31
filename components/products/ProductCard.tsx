@@ -1,35 +1,45 @@
 import { Card } from "../ui/card"
 import { Button } from "../ui/button"
-import { Plus } from "lucide-react"
+import { Heart, ShoppingCart } from "lucide-react"
 import Image from "next/image"
 
 const ProductCard = () => {
     return (
+      <div className="flex flex-col gap-1">
         <Card 
-          className="relative p-0 m-0 h-[200px] lg:h-[300px] group border-0 
-          bg-transparent shadow-none rounded-sm"
+          className="p-0 m-0 relative h-[200px] lg:h-[300px] group ring-0"
         >
           <Image
             src="/images/productImage6.jpg"
             width={700}
             height={700}
             alt='productImage' 
-            className="w-full h-full object-cover object-center 
+            className="w-full h-full object-contain object-center 
             transition-transform duration-300 group-hover:scale-105 cursor-pointer"
           />
 
-          <div className="absolute bottom-0 w-full bg-black/80 shadow-lg px-2 py-2 flex items-center justify-between">
+          {/* Favorite button  */}
+          <Button
+          className=" absolute top-10 right-2 bg-black/80 flex items-center justify-center rounded-full h-8 w-8 cursor-pointer border border-slate-300 hover:scale-110 transition-transform duration-300"
+          >
+            <Heart color="white" />
+          </Button>
+        </Card>
+
+        {/* PRODUCT NAME AND PRICE  */}
+        <div className="w-full px-2 flex items-center justify-between">
             <div className="flex flex-col">
-              <p className="text-white text-[14px] font-bold line-clamp-1 tracking-wider">Nike BackPack</p>
-              <p className="text-white">GHS 400</p>
+              <p className=" line-clamp-1 text-black text-[15px] font-semibold">Nike BackPack</p>
+              <p className="text-black text-[14px]">GHS 400</p>
             </div>
             <Button 
-              className="bg-white flex items-center justify-center rounded-full h-8 w-8 cursor-pointer"
+              className="bg-slate-200 flex items-center justify-center rounded-full h-8 w-8 cursor-pointer border border-slate-300 hover:scale-110 transition-transform duration-300"
             >
-              <Plus color="black"/>
+              <ShoppingCart color="black" />
             </Button>
           </div>
-        </Card>
+      </div>
+
     )
 }
 
