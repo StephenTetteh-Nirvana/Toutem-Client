@@ -11,6 +11,8 @@ import {
   DropdownMenuItem
  } from "@/components/ui/dropdown-menu"
 
+ import { dummyProducts } from "@/dummyProducts"
+
 const page = () => {
     return (
       <div>
@@ -41,18 +43,9 @@ const page = () => {
             />
           </div>
           <div className="mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 mt-5 gap-2">
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
+            {dummyProducts.map((product,index)=>(
+              <ProductCard key={index} product={product}/>
+            ))}
           </div>
         </div>
 
