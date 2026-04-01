@@ -43,9 +43,9 @@ const Navbar = () => {
         <Link href="/products">
           <li className={pathname === '/products' ? 'text-black font-bold' : 'text-gray-600 hover:text-black'}>SHOP</li>
         </Link>
-        <Link href="/contact">
-          <li className={pathname === '/contact' ? 'text-black font-bold' : 'text-gray-600 hover:text-black'}>CONTACT US</li>
-        </Link>
+        
+        <li className={pathname === '/contact' ? 'text-black font-bold' : 'text-gray-600 hover:text-black'}>CONTACT US</li>
+        
       </ul>
 
       <div className="flex flex-row items-center gap-3 ">
