@@ -55,12 +55,14 @@ const FeaturedProducts = () => {
         className="mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 mt-5 gap-2"
       >
         {featuredProducts.map((product,index)=>(
-          <Card key={index} className="p-0 m-0 h-[200px] lg:h-[270px] group border-0 bg-transparent shadow-none">
-            <img
+          <Card key={index} className="p-0 m-0 h-[200px] lg:h-[270px] group ring-0 bg-transparent shadow-none">
+            <Image
               src={product.image}
               alt='productImage' 
-              className="w-full h-full object-contain object-center transition-transform duration-300 group-hover:scale-105 cursor-pointer brightness-95"
-              />
+              width={700}
+              height={700}
+              className="w-full h-full object-contain object-center transition-transform duration-300 group-hover:scale-105 cursor-pointer"
+            />
             
             {/* <Image
               src={product.image}
@@ -85,7 +87,7 @@ const FeaturedProducts = () => {
         >
           <Button
             variant="outline" 
-            className="rounded-full py-5 px-10 border border-black  cursor-pointer hover:bg-black hover:text-white hover:font-semibold">
+            className="rounded-full py-5 px-10 border border-black cursor-pointer hover:bg-black hover:text-white hover:font-semibold">
             BROWSE ALL PRODUCTS
           </Button>
         </Link>

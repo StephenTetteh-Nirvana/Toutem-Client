@@ -23,12 +23,7 @@ const MobileNavMenu = () => {
           <li className={pathname === '/contact' ? 'text-black font-bold' : 'text-gray-600 hover:text-black'}>CONTACT US</li>
         </Link>
       </ul>
-      <div className="mt-3 flex gap-3">
-        <Link href="/cart">
-          <ShoppingCart className="cursor-pointer" />
-        </Link>
-        <CircleUserRound className="cursor-pointer" />
-      </div>
+      
       <Button className="mt-2 py-4 bg-black/70 cursor-pointer">
         Get Started
       </Button>

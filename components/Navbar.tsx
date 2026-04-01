@@ -48,7 +48,7 @@ const Navbar = () => {
         </Link>
       </ul>
 
-      <div>
+      <div className="flex flex-row items-center gap-3 ">
         <button className="cursor-pointer sm:hidden">
           {!open ? 
           <Menu onClick={()=>toggleMenu()}/> 
@@ -56,12 +56,12 @@ const Navbar = () => {
           <X onClick={()=>toggleMenu()}/>
           }
         </button>
-        <div className="hidden sm:flex sm:gap-4 sm:items-center">
+        <div className="flex gap-4 items-center">
           <Link href="/cart">
             <ShoppingCart className="cursor-pointer" />
           </Link>
           <CircleUserRound className="cursor-pointer" />
-          <Button className="py-4 rounded-sm bg-black/80 cursor-pointer">
+          <Button className="hidden md:flex py-4 rounded-sm bg-black/80 cursor-pointer">
           Get Started
         </Button>
         </div>
