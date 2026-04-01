@@ -49,13 +49,15 @@ const Navbar = () => {
       </ul>
 
       <div className="flex flex-row items-center gap-3 ">
-        <button className="cursor-pointer sm:hidden">
+        <Button className="bg-slate-100 rounded-md cursor-pointer sm:hidden"
+          onClick={()=>toggleMenu()}
+        >
           {!open ? 
-          <Menu onClick={()=>toggleMenu()}/> 
+          <Menu color="black"/> 
           : 
-          <X onClick={()=>toggleMenu()}/>
+          <X color="black"/>
           }
-        </button>
+        </Button>
         <div className="flex gap-4 items-center">
           <Link href="/cart">
             <ShoppingCart className="cursor-pointer" />
